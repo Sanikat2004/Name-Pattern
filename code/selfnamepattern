@@ -1,0 +1,177 @@
+class Namepattern{
+//S Pattern
+ void displaypatternS(int size)
+  {
+    for(int ln=1;ln<=2*size+3;ln++)
+     {
+      for(int symbols=1;symbols<=2*size+3;symbols++)
+      {
+       if((ln==1&&symbols!=1)||(ln==2*size+3&&symbols!=2*size+3))
+         {
+           System.out.print("*");
+         }
+         else if(ln==(2*size+3)/2+1)
+          {
+            if(symbols==1||symbols==2*size+3)
+             {
+               System.out.print(" ");
+             }
+             else
+             {
+              System.out.print("*");
+             }  
+           }  
+          else if((ln!=1&&ln!=2*size+3))
+           {
+             if(ln<=(2*size+3)/2&&symbols==1)
+              {
+                System.out.print("*");
+              }
+              else if(ln>(2*size+3)/2&&symbols==2*size+3)
+               {
+                 System.out.print("*");
+               }
+               else
+               {
+                System.out.print(" ");
+               }
+             }
+             else
+             {
+               System.out.print(" ");
+             }
+            }
+             System.out.print("\n");
+           }
+         }            
+            	                
+// A pattern
+void displaypatternA(int size)
+ {
+   for(int ln=1;ln<=2*size+3;ln++)
+    {
+      for(int symbols=1;symbols<=2*size+3;symbols++)
+       {
+          if(ln==1)
+           {
+             if(symbols==1||symbols==2*size+3)
+              {
+                System.out.print(" ");
+              }
+              else
+               { 
+                 System.out.print("*");
+               }
+             }
+             if(ln!=1&& ln!=(2*size+3)/2+1)
+              {
+                if(symbols==1||symbols==2*size+3)
+                 {  
+                   System.out.print("*");
+                 }
+                 else
+                 {
+                   System.out.print(" ");
+                 }
+               }
+               if(ln==(2*size+3)/2+1)
+                {
+                  System.out.print("*");
+                }
+          }
+          System.out.print("\n");
+       }
+  }
+ //N Pattern
+ void displaypatternN(int size)
+	 {
+	   for(int ln=1;ln<=2*size+3;ln++)
+	    {
+	      for(int symbols=1;symbols<=2*size+3;symbols++)
+	       {
+	         if(symbols==1||symbols==2*size+3)
+	          {
+	            System.out.print("*");
+	          }
+	          else if(ln==symbols)
+	           {
+	             System.out.print("*");
+	           }
+	           else
+	           {
+	             System.out.print(" ");
+	           }
+	          }
+	          System.out.print("\n");
+	       }
+	      } 
+//I Pattern
+void displaypatternI(int size)
+	 {
+	   for(int ln=1;ln<=2*size+3;ln++)
+	    {
+	      for(int symbols=1;symbols<=2*size+3;symbols++)
+	       {
+	         if(ln==1||ln==2*size+3)
+	          {
+	            System.out.print("*");
+	          }
+	          else if(symbols==(2*size+3)/2+1)
+	           {
+	             System.out.print("*");
+	           }
+	           else
+	           {
+	             System.out.print(" ");
+	           }
+	          }
+	          System.out.print("\n");
+	       }
+	      } 
+//K Pattern
+void displaypatternK(int size)
+  {
+     for(int ln=1;ln<=2*size+3;ln++)
+	    {
+	      for(int symbols=1;symbols<=2*size+3;symbols++)
+	       {
+	         if(symbols==1)
+	          {
+	            System.out.print("*");
+	          }
+	         else if(ln==(2*size+3)/2+1&&symbols<=size+2)
+	           {  
+	             System.out.print("*");
+	           }
+	         else if(ln<=(2*size+3)/2+1&&symbols==2*size+3-ln+1)
+	            {
+	              System.out.print("*");
+	            }
+	          else if(ln>(2*size+3)/2+1&&symbols==ln)
+	             {
+	               System.out.print("*");
+	             }
+	           else
+	             {
+	               System.out.print(" ");
+	             }
+	            }
+	            System.out.print("\n");    
+	           }
+	         }       	                
+    public static void main(String[] args) 
+    {
+        Namepattern s= new Namepattern();
+        s.displaypatternS(1);
+        System.out.print("\n");
+        s.displaypatternA(1);
+        System.out.print("\n");
+        s.displaypatternN(1);
+        System.out.print("\n");
+        s.displaypatternI(1);
+        System.out.print("\n");
+        s.displaypatternK(1);
+        System.out.print("\n");
+        s.displaypatternA(1);
+    }
+}
